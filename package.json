@@ -1,0 +1,22 @@
+{
+  "name": "evermorenft",
+  "version": "1.0.0",
+  "description": "Test NFT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Hibbert",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "ethers": "^5.1.0",
+    "hardhat": "^2.1.2"
+  },
+  "dependencies": {
+    "@alch/alchemy-web3": "^1.0.2",
+    "@openzeppelin/contracts": "^3.1.0-solc-0.7",
+    "arweave": "^1.10.13",
+    "dotenv": "^8.2.0"
+  }
+}
