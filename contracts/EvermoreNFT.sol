@@ -1,6 +1,6 @@
 //Contract based on https://docs.openzeppelin.com/contracts/3.x/erc721
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.7.3;
+pragma solidity ^0.8.6;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
@@ -11,10 +11,10 @@ contract EvermoreNFT is ERC721, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor() public ERC721("EvermoreNFT", "NFT") {}
+    constructor() public ERC721("EvermoreNFTs", "NFT") {}
 
     function mintNFT(address recipient, string memory tokenURI)
-        public onlyOwner
+        public 
         returns (uint256)
     {
         _tokenIds.increment();

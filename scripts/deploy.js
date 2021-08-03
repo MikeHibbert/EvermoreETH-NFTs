@@ -3,6 +3,7 @@ async function main() {
     
     // Start deployment, returning a promise that resolves to a contract object
     const evermoreNFT = await EvermoreNFT.deploy();
+    // await evermoreNFT.deployed();
     console.log("Contract deployed to address:", evermoreNFT.address);
  }
  

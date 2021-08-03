@@ -83,6 +83,7 @@ arweave.transactions.get('X6rUXIvJeK7Jyd5zCEGnyXw4dRKEaJTsTvhtDAhG_gc').then(asy
 
     tx.addTag('EVERMORE_NFT_METADATA', 'ETH NETWORK DATA');
     tx.addTag('Content-Type', 'application/json');
+    tx.addTag('NFT-Source', 'X6rUXIvJeK7Jyd5zCEGnyXw4dRKEaJTsTvhtDAhG_gc');
 
     await arweave.transactions.sign(tx, wallet1);
     await arweave.transactions.post(tx);
