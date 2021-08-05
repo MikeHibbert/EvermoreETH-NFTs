@@ -1,10 +1,17 @@
 async function main() {
-    const EvermoreNFT = await ethers.getContractFactory("EvermoreNFT");
+    // const EvermoreNFT = await ethers.getContractFactory("EvermoreNFT");
+    
+    // // Start deployment, returning a promise that resolves to a contract object
+    // const evermoreNFT = await EvermoreNFT.deploy();
+    // // await evermoreNFT.deployed();
+    // console.log("Contract deployed to address:", evermoreNFT.address);
+
+    const EvermoreFile = await ethers.getContractFactory("EvermoreFile");
     
     // Start deployment, returning a promise that resolves to a contract object
-    const evermoreNFT = await EvermoreNFT.deploy();
+    const evermoreFile = await EvermoreFile.deploy();
     // await evermoreNFT.deployed();
-    console.log("Contract deployed to address:", evermoreNFT.address);
+    console.log("Contract deployed to address:", evermoreFile.address);
  }
  
  main()
