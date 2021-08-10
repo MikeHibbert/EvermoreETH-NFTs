@@ -3,6 +3,7 @@
 */
 require('dotenv').config();
 require("@nomiclabs/hardhat-ethers");
+require("@nomiclabs/hardhat-ganache");
 require("hardhat-gas-reporter");
 
 const { API_URL, DEV_API_URL, PRIVATE_KEY } = process.env;

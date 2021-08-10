@@ -1,10 +1,14 @@
-pragma solidity ^0.8.6;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.7.3;
 pragma experimental ABIEncoderV2;
 
 contract EvermoreFile {
     struct File{
         string path;
         string hash;
+        uint256 timestamp;
+        string hostname;
+        uint256 file_size;
     }
 
     struct User {
@@ -28,8 +32,8 @@ contract EvermoreFile {
         return userAddresses;
     }
 
-    function set(string memory file_path, string memory ipfsHash) public {
-        File memory file = File({path: file_path, hash: ipfsHash});
+    function set(string memory file_path, string memory ipfsHash, uint256 timestamp, uint256 file_size, string memory hostname) public {
+        File memory file = File({path: file_path, hash: ipfsHash, timestamp: timestamp, file_size: file_size, hostname: hostname});
         userStructs[msg.sender].files.push(file);
 
         if(!inUsers(msg.sender)) {
