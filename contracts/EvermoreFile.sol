@@ -9,6 +9,7 @@ contract EvermoreFile {
         uint256 timestamp;
         string hostname;
         uint256 file_size;
+        string content_type;
     }
 
     struct User {
@@ -32,8 +33,15 @@ contract EvermoreFile {
         return userAddresses;
     }
 
-    function set(string memory file_path, string memory ipfsHash, uint256 timestamp, uint256 file_size, string memory hostname) public {
-        File memory file = File({path: file_path, hash: ipfsHash, timestamp: timestamp, file_size: file_size, hostname: hostname});
+    function set(
+        string memory file_path, 
+        string memory ipfsHash, 
+        uint256 timestamp, 
+        uint256 file_size, 
+        string memory hostname, 
+        string memory content_type) public {
+
+        File memory file = File({path: file_path, hash: ipfsHash, timestamp: timestamp, file_size: file_size, hostname: hostname, content_type: content_type});
         userStructs[msg.sender].files.push(file);
 
         if(!inUsers(msg.sender)) {

@@ -9,7 +9,7 @@ require("hardhat-gas-reporter");
 const { API_URL, DEV_API_URL, PRIVATE_KEY } = process.env;
 module.exports = {
    solidity: "0.7.3",
-   defaultNetwork: "rinkeby",
+   defaultNetwork: "ropsten",
    gasReporter: {
       enabled: true
    },
